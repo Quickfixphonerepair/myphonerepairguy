@@ -9,81 +9,65 @@
   <title>My Phone Repair Guy | Marina del Rey, CA</title>
   <style>
     :root {
-      --primary: #a076f9; /* Tatlı mor */
-      --accent1: #5ec8e6; /* Açık mavi */
-      --accent2: #ffd166; /* Yumuşak sarı */
+      --primary: #a076f9;
+      --accent1: #5ec8e6;
+      --accent2: #ffd166;
       --text-dark: #333;
       --bg-light: #f9f9f9;
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: var(--bg-light);
       color: var(--text-dark);
       line-height: 1.6;
     }
-
     header {
       background-color: var(--primary);
       color: white;
       text-align: center;
       padding: 2rem 1rem;
     }
-
     nav {
       background-color: var(--accent1);
       padding: 1rem;
       text-align: center;
     }
-
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
     }
-
     section {
       max-width: 1000px;
       margin: auto;
       padding: 2rem 1rem;
     }
-
     h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
       color: var(--primary);
     }
-
     .services li {
       margin-bottom: 10px;
       font-size: 1.1rem;
     }
-
     .services li::before {
-      content: "\1F527 "; /* İngiliz anahtarı emoji */
+      content: "\1F527 ";
     }
-
     .map-container iframe {
       width: 100%;
       height: 300px;
       border: 0;
       border-radius: 8px;
     }
-
     .contact-box {
       background-color: white;
       padding: 1.5rem;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
     .contact-box input,
     .contact-box textarea {
       width: 100%;
@@ -92,7 +76,6 @@
       border-radius: 5px;
       border: 1px solid #ccc;
     }
-
     .contact-box button {
       background-color: var(--accent2);
       color: #222;
@@ -103,7 +86,6 @@
       font-weight: bold;
       cursor: pointer;
     }
-
     footer {
       background-color: var(--primary);
       color: white;
@@ -111,13 +93,17 @@
       padding: 1rem;
       margin-top: 2rem;
     }
-
     .center-image, .bottom-image {
       width: 100%;
       max-width: 1000px;
       margin: 20px auto;
       display: block;
       border-radius: 10px;
+    }
+    .divider {
+      height: 6px;
+      background-color: var(--accent1);
+      margin: 40px 0;
     }
   </style>
 </head>
@@ -128,12 +114,24 @@
   </header>
 
   <nav>
+    <a href="#location">Location</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
-    <a href="#location">Location</a>
   </nav>
 
-  <img src="top-photo.jpg" alt="Phone Repair Photo" class="center-image">
+  <section id="location">
+    <h2>Our Location</h2>
+    <p><strong>Address:</strong> 4059 Lincoln Blvd, Ste E, Marina del Rey, CA 90292</p>
+    <p><strong>Phone:</strong> <a href="tel:4245218899">(424) 521-8899</a></p>
+    <p><strong>Hours:</strong> Mon–Sun: 9:00 AM – 11:30 PM (Open Now)</p>
+    <div class="map-container">
+      <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.9449147887366!2d-118.446395!3d33.989713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2ba302643fb7b%3A0x7a5acb39289b37a1!2s4059%20Lincoln%20Blvd%20Ste%20E%2C%20Marina%20Del%20Rey%2C%20CA%2090292!5e0!3m2!1sen!2sus!4v1683611111111!5m2!1sen!2sus" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <img src="top-photo.jpg" alt="Location Photo" class="center-image">
+
+  <div class="divider"></div>
 
   <section id="services">
     <h2>Repair Services</h2>
@@ -147,6 +145,8 @@
       <li>On-Site Mobile Service</li>
     </ul>
   </section>
+
+  <div class="divider"></div>
 
   <section id="contact" class="contact-box">
     <h2>Contact Us</h2>
@@ -165,16 +165,6 @@
 
       <button type="submit">Send</button>
     </form>
-  </section>
-
-  <section id="location">
-    <h2>Our Location</h2>
-    <p><strong>Address:</strong> 4059 Lincoln Blvd, Ste E, Marina del Rey, CA 90292</p>
-    <p><strong>Phone:</strong> <a href="tel:4245218899">(424) 521-8899</a></p>
-    <p><strong>Hours:</strong> Mon–Sun: 9:00 AM – 11:30 PM (Open Now)</p>
-    <div class="map-container">
-      <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.9449147887366!2d-118.446395!3d33.989713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2ba302643fb7b%3A0x7a5acb39289b37a1!2s4059%20Lincoln%20Blvd%20Ste%20E%2C%20Marina%20Del%20Rey%2C%20CA%2090292!5e0!3m2!1sen!2sus!4v1683611111111!5m2!1sen!2sus" allowfullscreen></iframe>
-    </div>
   </section>
 
   <img src="bottom-photo.jpg" alt="Repair Example Photo" class="bottom-image">
